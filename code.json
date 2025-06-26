@@ -1,20 +1,21 @@
 {
-  "name": "my-cli-tool",
+  "name": "vulnerable-node-app",
   "version": "1.0.0",
-  "description": "A simple CLI tool",
-  "main": "cli.js",
-  "bin": {
-    "mycli": "./cli.js"
-  },
+  "description": "A deliberately vulnerable Node.js app for security testing",
+  "main": "index.js",
   "scripts": {
-    "start": "node cli.js"
+    "start": "node index.js",
+    "test": "echo \"No test specified\" && exit 0"
   },
-  "keywords": ["cli", "tool"],
-  "author": "Your Name",
+  "author": "Security Tester",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^5.3.0",
-    "commander": "^11.1.0"
+    "express": "4.16.0",
+    "lodash": "4.17.11",
+    "mongoose": "5.2.0",
+    "marked": "0.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.0"
   }
 }
-
